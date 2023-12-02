@@ -19,4 +19,4 @@ rem ---- Beispiele ---------------------------------------------
 rem %PROG% /S
 rem %PROG% /VERYSILENT /NORESTART /ALLUSERS
 rem %PROG% /install /quiet /norestart
-rem c:\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
+rem %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
