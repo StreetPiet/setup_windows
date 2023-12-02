@@ -2,11 +2,11 @@ rem ------------------------------------------------------------
 rem Installiere 
 rem ------------------------------------------------------------
 
-set BASEURL=https://glpi.albrecht-elektrotechnik.local/repo/standardsoftware
+set BASEURL=https://download.mozilla.org/?product=firefox-stub&os=win&lang=de
 set PROG=Firefox_Installer.exe
 
 rem MKDIR C:\temp\ & CD /D C:\temp
-curl -k %BASEURL%/%PROG% -o %PROG%
+curl -k "%BASEURL%" -o %PROG%
 
 (
 echo [Install]
