@@ -1,13 +1,34 @@
 rem ------------------------------------------------------------
-rem Installiere KeePass XC
+rem Installationsroutine
 rem ------------------------------------------------------------
 
-set BASEURL=https://glpi.albrecht-elektrotechnik.local/repo/standardsoftware
+rem --- Option: Download in ein temporäres Verzeichnis
+rem --- Kann für z.B. für GLPI abgeschaltet werden
+set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
+MKDIR %SAVEPATH% & CD /D %SAVEPATH%
+
+rem ---- Microsoft Redistibutable --------------------------------------------------------
+rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
+set BASEURL=https://github.com/keepassxreboot/keepassxc/releases/download/2.7.6
 set PROG=KeePassXC-2.7.6-Win64.msi
 
-MKDIR C:\temp\ & CD /D C:\temp
-curl -k %BASEURL%/%PROG%            -o c:\temp\%PROG%
-curl -k %BASEURL%/VC_redist.x64.exe -o c:\temp\VC_redist.x64.exe
+rem --- Lade Installationsdatei herunter
+curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+rem --- Silent-Installation des Programms:
+%SAVEPATH%\VC_redist.x64.exe /Q
 
-c:\temp\VC_redist.x64.exe /Q
-c:\windows\system32\msiexec /i "%PROG%" /passive
+rem ---- KeePass XC Installation: --------------------------------------------------------
+rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
+set BASEURL=https://github.com/keepassxreboot/keepassxc/releases/download/2.7.6
+set PROG=KeePassXC-2.7.6-Win64.msi
+
+rem --- Lade Installationsdatei herunter
+curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+rem --- Silent-Installation des Programms:
+%SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
+
+rem ---- Beispiele ---------------------------------------------
+rem %PROG% /S
+rem %PROG% /VERYSILENT /NORESTART /ALLUSERS
+rem %PROG% /install /quiet /norestart
+rem %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
