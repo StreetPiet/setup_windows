@@ -1,13 +1,20 @@
 rem ------------------------------------------------------------
-rem Installiere 
+rem Installationsroutine
 rem ------------------------------------------------------------
 
+rem --- Option: Download in ein temporäres Verzeichnis
+rem --- Kann für z.B. für GLPI abgeschaltet werden
+set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
+MKDIR %SAVEPATH% & CD /D %SAVEPATH%
+
+rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
 set BASEURL=https://download.mozilla.org/?product=firefox-stub&os=win&lang=de
 set PROG=Firefox_Installer.exe
 
-rem MKDIR C:\temp\ & CD /D C:\temp
-curl -k "%BASEURL%" -o %PROG%
+rem --- Lade Installationsdatei herunter
+curl -k "%BASEURL%" -o %SAVEPATH%\%PROG%
 
+rem --- Silent-Installation des Programms:
 (
 echo [Install]
 echo TaskbarShortcut=true

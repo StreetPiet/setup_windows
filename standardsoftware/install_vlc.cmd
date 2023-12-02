@@ -1,15 +1,19 @@
 rem ------------------------------------------------------------
-rem Installiere VLC
+rem Installationsroutine
 rem ------------------------------------------------------------
 
-set BASEURL=https://glpi.albrecht-elektrotechnik.local/repo/standardsoftware
+rem --- Option: Download in ein temporäres Verzeichnis
+rem --- Kann für z.B. für GLPI abgeschaltet werden
+set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
+MKDIR %SAVEPATH% & CD /D %SAVEPATH%
+
+rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
+set BASEURL=http://get.videolan.org/vlc/3.0.20/win64
 set PROG=vlc-3.0.20-win64.exe
 
-MKDIR C:\temp\ & CD /D C:\temp
-curl -k %BASEURL%/%PROG% -o c:\temp\%PROG%
+rem --- Lade Installationsdatei herunter
+curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
-rem ---- Beispiele ---------------------------------------------
+rem --- Silent-Installation des Programms:
 %PROG% /language=de /L=1031 /S
-rem %PROG% /VERYSILENT /NORESTART /ALLUSERS
-rem %PROG% /install /quiet /norestart
-rem c:\windows\system32\msiexec /i "%PROG%" /passive /l c:\temp\%PROG%.log 
+
