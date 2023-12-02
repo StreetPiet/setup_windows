@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
-set BASEURL=https://glpi.albrecht-elektrotechnik.local/repo/standardsoftware
+set BASEURL=
 set PROG=
 
 rem --- Lade Installationsdatei herunter
