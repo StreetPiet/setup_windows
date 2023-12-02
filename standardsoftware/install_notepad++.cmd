@@ -2,8 +2,8 @@ rem ------------------------------------------------------------
 rem Installiere KeePass XC
 rem ------------------------------------------------------------
 
-set BASEURL=https://glpi.albrecht-elektrotechnik.local/repo/standardsoftware
-set PROG=npp.8.5.8.Installer.x64.exe
+set BASEURL=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6
+set PROG=npp.8.6.Installer.x64.exe
 
 MKDIR C:\temp\ & CD /D C:\temp
 curl -k %BASEURL%/%PROG% -o c:\temp\%PROG%
@@ -13,4 +13,4 @@ if exist "%%programfiles%%\Notepad++\uninstall.exe" "%%programfiles%%\Notepad++\
 if exist "%%programfiles(x86)%%\ Notepad++\uninstall.exe" "%%programfiles(x86)%%\Notepad++\uninstall.exe" /S
 
 rem --- Installiere Notepad++
-%PROG% /S
+%PROG% /S /noUpdater

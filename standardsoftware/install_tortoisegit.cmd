@@ -16,9 +16,3 @@ curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
-
-rem ---- Beispiele ---------------------------------------------
-rem %PROG% /S
-rem %PROG% /VERYSILENT /NORESTART /ALLUSERS
-rem %PROG% /install /quiet /norestart
-rem %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
