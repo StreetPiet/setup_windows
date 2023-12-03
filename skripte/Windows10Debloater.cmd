@@ -11,6 +11,6 @@ rem --- Lade Debloater .ZIP
 set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/skripte
 set PROG=Windows10Debloater-master.zip
 curl -k -L %BASEURL%/%PROG% -o %PROG%
-powershell.exe -command "Expand-Archive -Path %PROG% -DestinationPath . "
+powershell.exe -command "Expand-Archive -Force -Path %PROG% -DestinationPath . "
 CD Windows10Debloater-master
 powershell.exe -ExecutionPolicy remotesigned -File "Windows10Debloater.ps1"
