@@ -13,4 +13,4 @@ set PROG=Sandboxie-Plus-x64-v1.12.3.exe
 rem --- Lade Installationsdatei herunter
 curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
-%PROG% /lang=1031 /install /S
+%PROG% /SP- /NORESTART /lang=de /ALLUSERS /SILENT /VERYSILENT /SUPPRESSMSGBOXES
