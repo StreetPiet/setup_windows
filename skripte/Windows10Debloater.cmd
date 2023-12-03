@@ -13,4 +13,4 @@ set PROG=Windows10Debloater-master.zip
 curl -k -L %BASEURL%/%PROG% -o %PROG%
 powershell.exe -command "Expand-Archive -Path %PROG% -DestinationPath . "
 CD Windows10Debloater-master
-powershell.exe -command "Windows10Debloater.ps1"
+powershell.exe -File "Windows10Debloater.ps1"
