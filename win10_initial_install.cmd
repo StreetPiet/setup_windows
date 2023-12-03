@@ -1,5 +1,8 @@
 rem -----------------------------------------------------------------------
 rem Standardinstallation für ein frisch installiertes Windows 10 Pro
+rem 
+rem curl -k -L https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/win10_initial_install.cmd -o start.cmd
+rem
 rem -----------------------------------------------------------------------
 
 set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
