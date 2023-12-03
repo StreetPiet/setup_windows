@@ -12,3 +12,5 @@ set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/m
 set PROG=Windows10Debloater-master.zip
 curl -k -L %BASEURL%/%PROG% -o %PROG%
 powershell.exe -command "Expand-Archive -Path %PROG% -DestinationPath . "
+CD Windows10Debloater-master
+powershell.exe -command "Windows10Debloater.ps1"
