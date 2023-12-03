@@ -13,4 +13,4 @@ set PROG=Windows10Debloater-master.zip
 curl -k -L %BASEURL%/%PROG% -o %PROG%
 powershell.exe -command "Expand-Archive -Force -Path %PROG% -DestinationPath . "
 CD Windows10Debloater-master
-powershell.exe -ExecutionPolicy Unrestricted -File "Windows10SysPrepDebloater.ps1 -Sysprep -Debloat -Privacy"
+powershell.exe -ExecutionPolicy Unrestricted -File "Windows10SysPrepDebloater.ps1" -ArgumentList {-Sysprep -Debloat -Privacy}
