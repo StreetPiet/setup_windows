@@ -15,5 +15,5 @@ rem --- Lade Installationsdatei herunter
 curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
-%PROG% /S
+%PROG% /S /VERYSILENT /NORESTART /ALLUSERS
 

@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
-set BASEURL=https://de.libreoffice.org/donate/dl/win-x86_64/7.6.3/de
+set BASEURL=https://download.documentfoundation.org/libreoffice/stable/7.6.3/win/x86_64
 set PROG=LibreOffice_7.6.3_Win_x86-64.msi
 
 rem --- Lade Installationsdatei herunter
