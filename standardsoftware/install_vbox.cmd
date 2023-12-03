@@ -11,7 +11,7 @@ rem --- Microsoft Redistributable C++
 set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/essentiell
 set PROG=VC_redist.x64.exe
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 rem --- Silent-Installation des Programms:
 %PROG% /Q
 
@@ -19,13 +19,13 @@ rem --- VirtualBox Extension Pack
 set BASEURL=https://download.virtualbox.org/virtualbox/7.0.12
 set EXTN=Oracle_VM_VirtualBox_Extension_Pack-7.0.12.vbox-extpack
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%EXTN% -o %SAVEPATH%\%EXTN%
+curl -k -L %BASEURL%/%EXTN% -o %SAVEPATH%\%EXTN%
 
 rem --- VirtualBox
 set BASEURL=https://download.virtualbox.org/virtualbox/7.0.12
 set PROG=VirtualBox-7.0.12-159484-Win.exe
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 rem --- Silent-Installation des Programms:
 %PROG% --silent --msiparams "VBOX_START=0"
 

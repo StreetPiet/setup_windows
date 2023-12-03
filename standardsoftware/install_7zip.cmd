@@ -12,7 +12,7 @@ set BASEURL=https://7-zip.org/a
 set PROG=7z2301-x64.msi
 
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 

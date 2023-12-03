@@ -12,7 +12,7 @@ set BASEURL=https://download.gimp.org/gimp/v2.10/windows
 set PROG=gimp-2.10.36-setup.exe
 
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 %PROG% /S

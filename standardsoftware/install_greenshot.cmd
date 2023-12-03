@@ -12,7 +12,7 @@ set BASEURL=https://github.com/greenshot/greenshot/releases/download/Greenshot-R
 set PROG=Greenshot-INSTALLER-1.2.10.6-RELEASE.exe
 
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 (

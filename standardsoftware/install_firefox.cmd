@@ -12,7 +12,7 @@ set BASEURL=https://download.mozilla.org/?product=firefox-stub&os=win&lang=de
 set PROG=Firefox_Installer.exe
 
 rem --- Lade Installationsdatei herunter
-curl -k "%BASEURL%" -o %SAVEPATH%\%PROG%
+curl -k -L "%BASEURL%" -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 (

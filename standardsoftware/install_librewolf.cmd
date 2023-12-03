@@ -12,7 +12,7 @@ set BASEURL=https://glpi.albrecht-elektrotechnik.local/repo/standardsoftware
 set PROG=librewolf-119.0.1-1-windows-x86_64-setup.exe
 
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 %PROG% /S

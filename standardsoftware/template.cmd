@@ -12,7 +12,7 @@ set BASEURL=
 set PROG=
 
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 %PROG% /S
@@ -21,7 +21,7 @@ rem --- Silent-Installation des Programms:
 rem --- Installiere C++ Redistibutable
 rem set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/essentiell
 rem set PROG=VC_redist.x64.exe
-rem curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG% & %PROG% /Q
+rem curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG% & %PROG% /Q
 
 rem ---- Beispiele ---------------------------------------------
 rem %PROG% /S
