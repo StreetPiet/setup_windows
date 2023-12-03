@@ -20,6 +20,7 @@ echo [Install]
 echo TaskbarShortcut=true
 echo DesktopShortcut=true
 echo StartMenuShortcuts=true
+echo RegisterDefaultAgent=true
 ) > FirefoxInstaller_setup.ini
 
 %PROG% /INI=FirefoxInstaller_setup.ini
