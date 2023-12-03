@@ -17,4 +17,4 @@
 #### Anwendung:
 * Starten von ```cmd.exe```mit Administratorrechten
 * Ins Hauptverzeichnis wechseln: ```cd \```
-* Ausführen von: ```curl -k -L https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/win10_initial_install.cmd -o start.cmd```
+* Ausführen von: ```curl -k -L https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/win10_initial_install.cmd -o start.cmd & start.cmd```
