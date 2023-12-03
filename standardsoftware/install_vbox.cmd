@@ -33,6 +33,6 @@ rem --- VirtualBox Konfigurieren
 set VMPATH=%SYSTEMDRIVE%\VirtuelleMaschinen
 set VBOXMGR="%ProgramFiles%\Oracle\Virtualbox\Vboxmanage.exe"
 MKDIR %VMPATH%
-%VBOXMGR% extpack install C:\temp\%EXTN% --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+%VBOXMGR% extpack install %SAVEPATH%\%EXTN% --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
 %VBOXMGR% setproperty machinefolder %VMPATH%
 %VBOXMGR% setextradata global GUI/UpdateDate never
