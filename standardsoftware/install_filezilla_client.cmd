@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
-set BASEURL=https://dl2.cdn.filezilla-project.org/client
+set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/binaries
 set PROG=FileZilla_3.66.1_win64-setup.exe
 
 rem --- Lade Installationsdatei herunter
