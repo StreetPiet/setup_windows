@@ -10,8 +10,11 @@ rem GLPI: reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\R
 ping 127.0.0.1 > NUL
 
 rem ---- Windows 11 Tweaks ----------------------------------------------------
-rem reg add "HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /v Standard /t REG_SZ /f
-
+rem
+rem --- Altes Kontextmenue
+add "HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /v Standard /t REG_SZ /f
+rem --- keine Bing Vorschläge im Startmenü
+add "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 0 /F
 
 rem ---- OneDrive deaktivieren ------------------------------------------------
 taskkill /f /im OneDrive.exe
