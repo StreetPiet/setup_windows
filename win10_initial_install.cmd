@@ -10,9 +10,9 @@ MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Windows Tweaks
 set GITURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main
-curl -k -L %GITURL%/skripte/script_win10_std_einstellungen.cmd -o script.cmd & call script.cmd
-curl -k -L %GITURL%/skripte/script_onedrive_deinstallieren.cmd -o script.cmd & call script.cmd
-curl -k -L %GITURL%/skripte/Windows10Debloater.cmd -o script.cmd & call script.cmd
+curl -kLO %GITURL%/skripte/script_win10_std_einstellungen.cmd & call script_win10_std_einstellungen.cmd
+curl -kLO %GITURL%/skripte/script_onedrive_deinstallieren.cmd & call script_onedrive_deinstallieren.cmd
+curl -kLO %GITURL%/skripte/Windows10Debloater.cmd             & call Windows10Debloater.cmd
 
 rem --- Software-Pack: Essentials
 curl -kLO %GITURL%/packs/essentials.cmd & call essentials.cmd
