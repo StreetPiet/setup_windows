@@ -11,10 +11,15 @@ ping 127.0.0.1 > NUL
 
 rem ---- Windows 11 Tweaks ----------------------------------------------------
 rem
+rem --- Startmenü links
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAl /t REG_DWORD /d 0 /f
 rem --- Altes Kontextmenue
-add "HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /v Standard /t REG_SZ /f
+reg add "HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /v Standard /t REG_SZ /f
 rem --- keine Bing Vorschläge im Startmenü
-add "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 0 /F
+reg add "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /F
+rem --- Telemetrie reduzieren
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 1 /F
+
 
 rem ---- OneDrive deaktivieren ------------------------------------------------
 taskkill /f /im OneDrive.exe
