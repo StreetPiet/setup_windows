@@ -9,6 +9,10 @@ rem reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v 
 rem GLPI: reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v WindowsSettings /f /d "c:\temp\WindowsSettings.cmd > c:\temp\%%USERNAME%%_WindowsSettings.log"
 ping 127.0.0.1 > NUL
 
+rem ---- Windows 11 Tweaks ----------------------------------------------------
+rem reg add "HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /v Standard /t REG_SZ /f
+
+
 rem ---- OneDrive deaktivieren ------------------------------------------------
 taskkill /f /im OneDrive.exe
 REG DELETE "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f 
