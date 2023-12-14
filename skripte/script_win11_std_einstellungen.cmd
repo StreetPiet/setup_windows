@@ -19,7 +19,8 @@ rem --- keine Bing Vorschläge im Startmenü
 reg add "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /F
 rem --- Telemetrie reduzieren
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 1 /F
-
+rem --- Cortana abschalten
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsSearch" /v AllowCortana /t REG_DWORD /d 0 /F
 
 rem ---- OneDrive deaktivieren ------------------------------------------------
 taskkill /f /im OneDrive.exe
