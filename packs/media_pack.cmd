@@ -13,4 +13,5 @@ set STDURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/ma
 curl -kLO %STDURL%/install_audacity.cmd & call install_audacity.cmd
 curl -kLO %STDURL%/install_vlc.cmd & call install_vlc.cmd
 curl -kLO %STDURL%/install_gimp.cmd & call install_gimp.cmd
-
+curl -kLO %STDURL%/install_handbrake.cmd & call install_handbrake.cmd
+curl -kLO %STDURL%/install_blender.cmd & call install_blender.cmd
