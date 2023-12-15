@@ -24,7 +24,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection" 
 rem --- Cortana abschalten
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsSearch" /v AllowCortana /t REG_DWORD /d 0 /F
 rem --- Bypass TPM-Check
-
+rem reg add "HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup" /v AllowUpgradesWithUnsupportedTPMOrCPU /t REG_DWORD /d 1
 
 rem ---- OneDrive deaktivieren ------------------------------------------------
 taskkill /f /im OneDrive.exe
