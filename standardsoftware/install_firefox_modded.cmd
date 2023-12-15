@@ -13,16 +13,7 @@ set BASEURL=https://download-installer.cdn.mozilla.net/pub/firefox/releases/%VER
 set PROG=Firefox%%20Setup%%20%VERSION%.msi
 
 rem --- Lade Installationsdatei herunter
-curl -k -L "%BASEURL%" -o %SAVEPATH%\%PROG%
-
-rem --- Silent-Installation des Programms:
-(
-echo [Install]
-echo TaskbarShortcut=true
-echo DesktopShortcut=true
-echo StartMenuShortcuts=true
-echo RegisterDefaultAgent=true
-) > FirefoxInstaller_setup.ini
+echo %BASEURL%/%PROG%
+curl -kLO "%BASEURL%/%PROG%"
 
 %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log TASKBAR_SHORTCUT=true DESKTOP_SHORTCUT=false 
-
