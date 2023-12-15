@@ -23,6 +23,8 @@ rem --- Telemetrie reduzieren
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 1 /F
 rem --- Cortana abschalten
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsSearch" /v AllowCortana /t REG_DWORD /d 0 /F
+rem --- Bypass TPM-Check
+
 
 rem ---- OneDrive deaktivieren ------------------------------------------------
 taskkill /f /im OneDrive.exe
