@@ -10,6 +10,6 @@ MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/binaries
 set PROG=VC_redist.x64.exe
 rem --- Lade Installationsdatei herunter
-curl -k %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
+curl -kLO %BASEURL%/%PROG%
 rem --- Silent-Installation des Programms:
 %PROG% /Q
