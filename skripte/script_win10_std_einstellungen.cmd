@@ -29,6 +29,7 @@ powercfg /change monitor-timeout-ac 30
 powercfg /change monitor-timeout-dc 10
 powercfg /change disk-timeout-ac 0
 powercfg /change disk-timeout-dc 20
+
 rem ---- FastBoot ausschalten
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f
 
@@ -51,6 +52,9 @@ rem ---- Cortana & Taskansicht ausschalten
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search" /v SearchboxTaskbarMode /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowCortanaButton /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowTaskViewButton /t REG_DWORD /d 0 /f
+
+rem ---- Schaltet den Newsfeed in der Taskleiste ab
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Feeds" /v ShellFeedsTaskbarViewMode /t REG_DWORD /d 2 /f
 
 rem ---- Zeige alle Symbole in der Taskleiste
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer" /v EnableAutoTray /t REG_DWORD /d 0 /f
