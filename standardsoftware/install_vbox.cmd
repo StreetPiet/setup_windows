@@ -8,12 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Microsoft Redistributable C++
-set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/essentiell
-set PROG=VC_redist.x64.exe
-rem --- Lade Installationsdatei herunter
-curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
-rem --- Silent-Installation des Programms:
-%PROG% /Q
+curl -kLO https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/essentiell/install_vc_redist_runtime.cmd & call install_vc_redist_runtime.cmd
 
 rem --- VirtualBox Extension Pack
 set BASEURL=https://download.virtualbox.org/virtualbox/7.0.12
