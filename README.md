@@ -14,7 +14,12 @@
   * Entfernen von OneDrive
   * Entfernen der meisten Bloatware
 
-#### Anwendung:
+#### Anwendung mit Windows 10:
 * Starten von ```cmd.exe```mit Administratorrechten
-* Ins Hauptverzeichnis wechseln: ```cd \```
-* Ausführen von: ```curl -k -L https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/win10_initial_install.cmd -o start.cmd & start.cmd```
+* Diese Zeile einfügen und mit <Enter> starten:
+* ```mkdir \temp & cd \temp & curl -k -L https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/win10_initial_install.cmd -o start.cmd & start.cmd```
+
+#### Anwendung mit Windows 11:
+* Starten von ```cmd.exe```mit Administratorrechten
+* Diese Zeile einfügen und mit <Enter> starten:
+* ```mkdir \temp & cd \temp & curl -k -L https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/win11_initial_install.cmd -o start.cmd & start.cmd```
