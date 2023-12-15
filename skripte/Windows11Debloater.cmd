@@ -14,4 +14,4 @@ set PROG=Win11Debloat-master.zip
 curl -kLO %BASEURL%/%PROG%
 powershell.exe -command "Expand-Archive -Force -Path %PROG% -DestinationPath . "
 CD Win11Debloat-master
-powershell.exe -ExecutionPolicy Unrestricted -File "Win11Debloat.ps1" -Silent -RunDefaults -RemoveGamingApps -RemoveCommApps -RemoveW11Outlook -DisableBing -DisableTelemetry -DisableLockscreenTips -TaskbarAlignLeft -RemoveW11Outlook -RevertContextMenu -ShowKnownFileExt -HideSearchTb -HideTaskview -DisableCopilot -DisableWidgets -HideChat -DisableSuggestions -HideDupliDrive
+powershell.exe -ExecutionPolicy Unrestricted -File "Win11Debloat.ps1" -Silent -RunDefaults -RemoveGamingApps -RemoveCommApps -RemoveW11Outlook -DisableBing -DisableTelemetry -DisableLockscreenTips -TaskbarAlignLeft -RevertContextMenu -ShowKnownFileExt -HideSearchTb -HideTaskview -DisableCopilot -DisableWidgets -HideChat -DisableSuggestions -HideDupliDrive
