@@ -32,6 +32,8 @@ powercfg /change disk-timeout-dc 20
 
 rem ---- Fensterrahmen einblenden
 rem reg add "HKCU\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 9032078010000000 /f
+rem reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v BorderWidth /t REG_SZ /d "-15" /f
+rme reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v PaddedBorderWidth /t REG_SZ /d "-15" /f
 
 rem ---- FastBoot ausschalten
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f
