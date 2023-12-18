@@ -30,6 +30,9 @@ powercfg /change monitor-timeout-dc 10
 powercfg /change disk-timeout-ac 0
 powercfg /change disk-timeout-dc 20
 
+rem ---- Fensterrahmen einblenden
+rem reg add "HKCU\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 9032078010000000 /f
+
 rem ---- FastBoot ausschalten
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f
 
