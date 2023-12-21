@@ -12,7 +12,7 @@ set BASEURL=https://github.com/Hibbiki/chromium-win64/releases/download/v120.0.6
 set PROG=mini_installer.sync.exe
 
 rem --- Lade Installationsdatei herunter
-curl -k -L "%BASEURL%" -o %SAVEPATH%\%PROG%
+curl -k -L "%BASEURL%/%PROG%" -o %SAVEPATH%\%PROG%
 
 %PROG% --install --silent --system-level
 
