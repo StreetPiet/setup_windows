@@ -10,11 +10,11 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
-set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/binaries
-set PROG=
+set BASEURL=https://download.mp3tag.de
+set PROG=mp3tagv323-x64-setup.exe
 
 rem --- Lade Installationsdatei herunter
-curl -k -L "%BASEURL%" -o %SAVEPATH%\%PROG%
+curl -k -L "%BASEURL%/%PROG%" -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 (
