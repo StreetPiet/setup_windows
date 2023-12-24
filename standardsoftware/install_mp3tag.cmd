@@ -18,12 +18,15 @@ curl -k -L "%BASEURL%" -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 (
-echo [Install]
-echo TaskbarShortcut=true
-echo DesktopShortcut=true
-echo StartMenuShortcuts=true
-echo RegisterDefaultAgent=true
-) > FirefoxInstaller_setup.ini
+echo [shortcuts]
+echo startmenu=1
+echo desktop=1
+echo explorer=1
+echo quicklaunch=1
+echo [addons]
+echo quickpick=1
+echo [language]
+echo language=langid
+) > mp3tag.ini
 
-%PROG% /INI=FirefoxInstaller_setup.ini
-
+%PROG% /INI=mp3tag.ini
