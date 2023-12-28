@@ -17,15 +17,3 @@ curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
 %PROG% /S
-
-
-rem --- Installiere C++ Redistibutable
-rem set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/essentiell
-rem set PROG=VC_redist.x64.exe
-rem curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG% & %PROG% /Q
-
-rem ---- Beispiele ---------------------------------------------
-rem %PROG% /S
-rem %PROG% /VERYSILENT /NORESTART /ALLUSERS
-rem %PROG% /install /quiet /norestart
-rem %SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
