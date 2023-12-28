@@ -23,6 +23,9 @@ rem --- Telemetrie reduzieren
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 1 /F
 rem --- Cortana abschalten
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsSearch" /v AllowCortana /t REG_DWORD /d 0 /F
+rem --- Snipping Tool deaktivieren bzw. PrintScr Taste freigeben
+reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\TabletPC" /v DisableSnippingTool /t REG_DWORD /d 1 /F
+
 rem --- Bypass TPM-Check
 rem reg add "HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup" /v AllowUpgradesWithUnsupportedTPMOrCPU /t REG_DWORD /d 1
 
