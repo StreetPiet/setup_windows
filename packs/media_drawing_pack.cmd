@@ -13,3 +13,4 @@ set STDURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/ma
 curl -kLO %STDURL%/install_gimp.cmd      & call install_gimp.cmd
 curl -kLO %STDURL%/install_inkscape.cmd  & call install_inkscape.cmd
 curl -kLO %STDURL%/install_blender.cmd   & call install_blender.cmd
+curl -kLO %STDURL%/install_freecad.cmd   & call install_freecad.cmd
