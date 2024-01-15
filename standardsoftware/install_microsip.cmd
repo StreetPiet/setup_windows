@@ -16,6 +16,7 @@ curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Unzipper erstellen
 Call :UnZipFile "EXT%PROG%" "%PROG%"
+GOTO INSTALL
 
 :UnZipFile <ExtractTo> <newzipfile>
 set vbs="%SAVEPATH%\unzipper.vbs"
@@ -33,7 +34,7 @@ cscript //nologo %vbs%
 if exist %vbs% del /f /q %vbs%
 
 rem --- Silent-Installation des Programms:
-
+:INSTALL
 
 
 rem --- Installiere C++ Redistibutable
