@@ -24,6 +24,17 @@ curl -L "https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1
 rustdesk.exe --silent-install
 timeout /t 20
 
+(
+echo rendezvous_server = 'vpn.albrecht-elektrotechnik.de:21116'
+echo nat_type = 2
+echo serial = 0
+echo [options]
+echo local-ip-addr = '192.168.181.18'
+echo key = 'CEZezC0yGAIFQqehfnxjEN5W9WvffbsoRBHqnnYHqwQ='
+echo relay-server = 'vpn.albrecht-elektrotechnik.de'
+echo custom-rendezvous-server = 'vpn.albrecht-elektrotechnik.de'
+) > RustDesk2.toml
+
 cd "C:\Program Files\RustDesk\"
 rustdesk.exe --install-service
 timeout /t 20
@@ -31,7 +42,6 @@ timeout /t 20
 for /f "delims=" %%i in ('rustdesk.exe --get-id ^| more') do set rustdesk_id=%%i
 
 rustdesk.exe --config %rustdesk_cfg%
-
 rustdesk.exe --password %rustdesk_pw%
 
 echo ...............................................
