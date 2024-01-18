@@ -19,3 +19,6 @@ curl -kLO %BASEURL%/%PROG%
 powershell.exe "& {Expand-Archive %PROG% -DestinationPath .}"
 del %PROG%
 
+rem --- Sichere alle Treiber:
+cd /D "%SAVEPATH%\Double Driver"
+ddc b /target:%SAVEPATH%\Treiber
