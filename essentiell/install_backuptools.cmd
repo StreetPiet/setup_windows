@@ -12,7 +12,7 @@ set PROG=Disk2vhd.zip
 curl -kLO %BASEURL%/%PROG%
 
 set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/binaries
-set PROG=Double%20Driver.zip
+set PROG=Double%%20Driver.zip
 curl -kLO %BASEURL%/%PROG%
 
 
