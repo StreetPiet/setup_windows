@@ -15,7 +15,7 @@ rem --- Lade Installationsdatei herunter
 curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG%
 
 rem --- Silent-Installation des Programms:
-%SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" /passive /l %SAVEPATH%\%PROG%.log 
+%SYSTEMDRIVE%\windows\system32\msiexec /i "%PROG%" ACCEPTLICENSE=YES /passive /l %SAVEPATH%\%PROG%.log 
 
 
 rem --- Installiere C++ Redistibutable
