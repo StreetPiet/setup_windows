@@ -17,3 +17,4 @@ curl -kLO %GITURL%/skripte/Windows10Debloater.cmd             & call Windows10De
 rem --- Software-Pack: Essentials
 curl -kLO %GITURL%/packs/essentials.cmd & call essentials.cmd
 curl -kLO %GITURL%/essentiell/install_backuptools.cmd & call install_backuptools.cmd
+CD /D %SAVEPATH%
