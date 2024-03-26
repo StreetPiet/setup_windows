@@ -12,7 +12,7 @@ for /L %%b in (1, 1, 12) do (
 )
 
 REM Get your config string from your Web portal and Fill Below
-set rustdesk_cfg="=0nI9gDS4RVb2VHWXBjNnhGZHlmdalEeTFXT0IUYBBTW6FzZtBXe0MmcuBVTzpnI6ISeltmIsIiI6ISawFmIsISZk5CcsVGaoNWYyR3cv5Cdy9GcwV3ciojI5FGblJnIsISZk5CcsVGaoNWYyR3cv5Cdy9GcwV3ciojI0N3boJye"
+set rustdesk_cfg=0nI9gDS4RVb2VHWXBjNnhGZHlmdalEeTFXT0IUYBBTW6FzZtBXe0MmcuBVTzpnI6ISeltmIsIiI6ISawFmIsISZk5CcsVGaoNWYyR3cv5Cdy9GcwV3ciojI5FGblJnIsISZk5CcsVGaoNWYyR3cv5Cdy9GcwV3ciojI0N3boJye
 
 REM ############################### Please Do Not Edit Below This Line #########################################
 
