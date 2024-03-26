@@ -19,7 +19,7 @@ REM ############################### Please Do Not Edit Below This Line #########
 if not exist C:\Temp\ md C:\Temp\
 cd C:\Temp\
 
-RUSTVER=1.2.3-1
+set RUSTVER=1.2.3-1
 curl -L "https://github.com/rustdesk/rustdesk/releases/download/%RUSTVER%/rustdesk-%RUSTVER%-x86_64.exe" -o rustdesk.exe
          
 rustdesk.exe --silent-install
