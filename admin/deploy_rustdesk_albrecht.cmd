@@ -12,14 +12,15 @@ for /L %%b in (1, 1, 12) do (
 )
 
 REM Get your config string from your Web portal and Fill Below
-set rustdesk_cfg="9JSPRdXcIllbuFHSCJ1bzJmZmZ3V5cVNOVka45mZoVWcRZUSBdUewMkelpVRDJiOikXZrJCLiIiOikGchJCLiUGZusWauh2YlR3byR3alxWZtQHajVmcixWYu4Gc2JiOikXYsVmciwiIlRmLrlmboNWZ09mc0tWZsVWL0h2YlJnYsFmLuBndiojI0N3boJye"
+set rustdesk_cfg=9JSPRdXcIllbuFHSCJ1bzJmZmZ3V5cVNOVka45mZoVWcRZUSBdUewMkelpVRDJiOikXZrJCLiIiOikGchJCLiUGZusWauh2YlR3byR3alxWZtQHajVmcixWYu4Gc2JiOikXYsVmciwiIlRmLrlmboNWZ09mc0tWZsVWL0h2YlJnYsFmLuBndiojI0N3boJye
 
 REM ############################### Please Do Not Edit Below This Line #########################################
 
 if not exist C:\Temp\ md C:\Temp\
 cd C:\Temp\
 
-curl -L "https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.exe" -o rustdesk.exe
+set RUSTVER=1.2.3-1
+curl -L "https://github.com/rustdesk/rustdesk/releases/download/%RUSTVER%/rustdesk-%RUSTVER%-x86_64.exe" -o rustdesk.exe
 
 rustdesk.exe --silent-install
 timeout /t 20
