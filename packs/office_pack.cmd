@@ -6,7 +6,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Ordner: Standardsoftware
-set STDURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/standardsoftware
+set STDURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/standardsoftware
 curl -kLO %STDURL%/install_greenshot.cmd       & call install_greenshot.cmd
 curl -kLO %STDURL%/install_sumatrapdf.cmd      & call install_sumatrapdf.cmd
 curl -kLO %STDURL%/install_pdf24.cmd           & call install_pdf24.cmd

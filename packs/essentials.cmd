@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Ordner: Standardsoftware
-set STDURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/standardsoftware
+set STDURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/standardsoftware
 curl -kLO %STDURL%/install_7zip.cmd & call install_7zip.cmd
 curl -kLO %STDURL%/install_putty.cmd & call install_putty.cmd
 curl -kLO %STDURL%/install_firefox.cmd & call install_firefox.cmd

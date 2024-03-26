@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Installiere .NET Runtime
-set BASEURL=https://support.ostrachhelp.de/OstrachNET/setup_windows/raw/branch/main/essentiell
+set BASEURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/essentiell
 set PROG=install_windowsdesktop-runtime-6.0.23-x64.cmd
 curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG% & call %PROG%
 

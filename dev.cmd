@@ -6,6 +6,6 @@ rem ------------------------------------------------------------------------
 
 MKDIR %SYSTEMDRIVE%\temp
 CD /D %SYSTEMDRIVE%\temp
-git clone https://support.ostrachhelp.de/OstrachNET/setup_windows.git
+git clone https://support.ostrachhelp.de/OstrachHELP/setup_windows.git
 CD setup_windows
 git pull
