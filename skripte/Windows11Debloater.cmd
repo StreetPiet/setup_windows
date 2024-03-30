@@ -9,7 +9,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Lade Debloater .ZIP
-set BASEURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/skripte
+set BASEURL=https://raw.githubusercontent.com/StreetPiet/setup_windows/main/skripte
 set PROG=Win11Debloat-master.zip
 curl -kLO %BASEURL%/%PROG%
 powershell.exe -command "Expand-Archive -Force -Path %PROG% -DestinationPath . "

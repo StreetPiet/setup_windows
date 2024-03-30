@@ -19,7 +19,7 @@ rem --- Silent-Installation des Programms:
 %PROG% /S
 
 rem --- Installiere C++ Redistibutable
-rem set BASEURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/essentiell
+rem set BASEURL=https://raw.githubusercontent.com/StreetPiet/setup_windows/main/essentiell
 rem set PROG=VC_redist.x64.exe
 rem curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG% & %PROG% /Q
 

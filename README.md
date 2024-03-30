@@ -17,10 +17,10 @@
 #### Anwendung mit Windows 10:
 * Starten von ```cmd.exe```mit Administratorrechten
 * Diese Zeile einfügen und mit <Enter> starten:
-* ```mkdir \temp & cd \temp & curl -k -L https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/win10_initial_install.cmd -o start.cmd & start.cmd```
+* ```mkdir \temp & cd \temp & curl -k -L https://raw.githubusercontent.com/StreetPiet/setup_windows/main/win10_initial_install.cmd -o start.cmd & start.cmd```
 
 #### Anwendung mit Windows 11:
 * Starten von ```cmd.exe```mit Administratorrechten
 * Diese Zeile einfügen und mit <Enter> starten:
-* ```mkdir \temp & cd \temp & curl -k -L https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/win11_initial_install.cmd -o start.cmd & start.cmd```
+* ```mkdir \temp & cd \temp & curl -k -L https://raw.githubusercontent.com/StreetPiet/setup_windows/main/win11_initial_install.cmd -o start.cmd & start.cmd```
 

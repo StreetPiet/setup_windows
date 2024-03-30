@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Download Basis-URL, Dateiname und TEMP-Verzeichnis
-set BASEURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/binaries
+set BASEURL=https://raw.githubusercontent.com/StreetPiet/setup_windows/main/binaries
 set PROG=rustdesk-1.2.3-x86_64.exe
 
 rem --- Lade Installationsdatei herunter

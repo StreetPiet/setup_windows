@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Microsoft Redistributable C++
-curl -kLO https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/essentiell/install_vc_redist_runtime.cmd & call install_vc_redist_runtime.cmd
+curl -kLO https://raw.githubusercontent.com/StreetPiet/setup_windows/main/essentiell/install_vc_redist_runtime.cmd & call install_vc_redist_runtime.cmd
 
 rem --- VirtualBox Extension Pack
 set BASEURL=https://download.virtualbox.org/virtualbox/7.0.12

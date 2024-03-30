@@ -8,7 +8,7 @@ set SAVEPATH=%SYSTEMDRIVE%\TEMP\install
 MKDIR %SAVEPATH% & CD /D %SAVEPATH%
 
 rem --- Installiere C++ Redistibutable
-set BASEURL=https://support.ostrachhelp.de/OstrachHELP/setup_windows/raw/branch/main/binaries
+set BASEURL=https://raw.githubusercontent.com/StreetPiet/setup_windows/main/binaries
 set PROG=VC_redist.x64.exe
 curl -k -L %BASEURL%/%PROG% -o %SAVEPATH%\%PROG% & %PROG% /Q
 
